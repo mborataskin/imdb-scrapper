@@ -1,6 +1,6 @@
 # IMDb Scraper Project 🎬
 
-A Python-based automated scraper that extracts and organizes data from IMDb, using robust Object-Oriented Programming (OOP) principles and Selenium WebDriver.
+A Python-based automated scraper that extracts and organizes data from IMDb, using robust Object-Oriented Programming (OOP) principles and Selenium WebDriver. This project simulates a freelance-style task and is designed to be scalable for real client needs, such as regular database updates, media monitoring, or content aggregation services
 
 ##  Features
 - Scrapes the Top 15 Most Popular Movies and their Trivia.
