@@ -28,14 +28,16 @@ class UpcomingMoviesScraper(BaseScraper):
                         title = "N/A"
 
                     try:
-                        genres = movie.find_elements(By.CSS_SELECTOR, "ul .ipc-inline-list__item")
-                        genre_list = [genre.text for genre in genres[:3]]
+                        genres = movie.find_elements(By.CSS_SELECTOR,
+                                                     ".ipc-metadata-list-summary-item__tl .ipc-inline-list__item")
+                        genre_list = [g.text for g in genres if g.text.strip()][:3]
                     except:
                         genre_list = []
 
                     try:
-                        stars = movie.find_elements(By.CSS_SELECTOR, "ul .ipc-inline-list.ipc-inline-list--no-wrap.ipc-inline-list--inline.ipc-metadata-list-summary-item__stl.base .ipc-inline-list__item")
-                        star_list = [star.text for star in stars[:4]]
+                        stars = movie.find_elements(By.CSS_SELECTOR,
+                                                    ".ipc-metadata-list-summary-item__stl .ipc-inline-list__item")
+                        star_list = [s.text for s in stars if s.text.strip()][:4]
                     except:
                         star_list = []
 
